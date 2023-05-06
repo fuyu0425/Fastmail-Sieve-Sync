@@ -23,8 +23,8 @@ cp config.toml ~/.config/sieve-sync/config.toml
 - cookie has the format `__Host-s_XXXXXX=XXXXXXXX`: only this specific cookie is needed after my test
 
 You can look the following screenshots:
-!(./screenshots/sieve_edit.png)
-!(./screenshots/sieve_request.png)
+![Edit Sieve to trigger request](./images/sieve_edit.png)
+![Capture request](./images/sieve_request.png)
 
 
 ## Possible Application that builds on Sieve rules sync
