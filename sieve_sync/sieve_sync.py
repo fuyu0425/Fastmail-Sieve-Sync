@@ -62,7 +62,7 @@ def main():
     if inserted:
 
         set_res = client.set_sieve(sieve)
-        print(set_res)
+        # print(set_res)
         print('First time running Sieve Sync; added inserted managed block.')
         save_location = data['SAVE_LOCATION']
         with open(save_location, 'w') as f:
@@ -91,7 +91,7 @@ def main():
         sieve.middle = new_sieve.middle
         sieve.end = new_sieve.end
 
-        print(sieve.start, new_sieve.start, old_sieve.start)
+        # print(sieve.start, new_sieve.start, old_sieve.start)
 
         if sieve != old_sieve:
             set_res = client.set_sieve(sieve)
