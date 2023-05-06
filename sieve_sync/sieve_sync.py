@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 import json
 import os
+import copy
 from typing import Any, Optional
 
 import tomllib
 from tap import Tap
-from xdg.BaseDirectory import (load_first_config, save_data_path, xdg_config_dirs)
+from xdg.BaseDirectory import (load_first_config, save_data_path,
+                               xdg_config_dirs)
 
 from .sieve import Sieve
 from .tiny_jmap_library import TinyJMAPClient
@@ -83,11 +85,19 @@ def main():
         assert os.path.exists(save_location)
         with open(save_location, 'r') as f:
             content = str(f.read())
+        old_sieve = copy.deepcopy(sieve)
         new_sieve = Sieve.from_file(content)
+        sieve.start = new_sieve.start
+        sieve.middle = new_sieve.middle
+        sieve.end = new_sieve.end
 
-        if sieve != new_sieve:
-            set_res = client.set_sieve(new_sieve)
+        print(sieve.start, new_sieve.start, old_sieve.start)
+
+        if sieve != old_sieve:
+            set_res = client.set_sieve(sieve)
             print('push to remote')
+            with open(save_location, 'w') as f:
+                f.write(str(sieve))
         else:
             print('no change so far; skip pushing')
 

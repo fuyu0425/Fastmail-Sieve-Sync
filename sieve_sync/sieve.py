@@ -91,7 +91,7 @@ class Sieve:
         end_index = s.find(HEADER_END)
 
         prolog = s[:start_index]
-        epilog = s[end_index:]
+        epilog = s[end_index+len(HEADER_END):]
 
         result = f'{prolog}{HEADER_START}{content}{HEADER_END}{epilog}'.strip()
         return result
@@ -102,7 +102,7 @@ class Sieve:
 
     @start.setter
     def start(self, value):
-        return self.edit_content(self._start, value)
+        self._start = self.edit_content(self._start, value)
 
     @property
     def middle(self):
@@ -110,7 +110,7 @@ class Sieve:
 
     @middle.setter
     def middle(self, value):
-        return self.edit_content(self._middle, value)
+        self._middle =  self.edit_content(self._middle, value)
 
     @property
     def end(self):
@@ -118,7 +118,7 @@ class Sieve:
 
     @end.setter
     def end(self, value):
-        return self.edit_content(self._end, value)
+        self._end = self.edit_content(self._end, value)
 
     def get_blocks(self):
         return {'start': self.start, 'middle': self.middle, 'end': self.end}

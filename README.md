@@ -27,6 +27,31 @@ You can look the following screenshots:
 ![Capture request](./images/sieve_request.png)
 
 
+## How to use
+When you first running; it will insert some commented blocks in your rules
+```
+#### Managed by Sieve Sync Start ####
+#### Managed by Sieve Sync End ####
+```
+
+Only the rules in the blocked will be synced.
+
+### Pull from Fastmail
+```
+sieve-sync --pull
+```
+
+It will saved the rules to the `SAVE_LOCATION` in `config.toml`.
+
+<red>I don't do any checking when pulling; all your local edit will be discarded!</red>
+
+### Push to Fastmail
+```
+sieve-sync --push
+```
+
+It will read from `SAVE_LOCATION` and push the update to Fastmail.
+
 ## Possible Application that builds on Sieve rules sync
 ### WIP: Masked/Random Email for all domains you own
 For the official Masked Email API, you can only select fastmail.com or one of your domains. This is very limited.
@@ -41,9 +66,11 @@ Hope we don't need to this tool anymore in the future when the offical API allow
 
 ## Note
 This project is mainly a POC.
+
 The API interface for Sieve is not public.
+
 I hope that Fastmail will not prevent us from doing such things before they publish public Sieve API or just support ManageSieve which is already supported by Cyrus IMAP I believe!!
 
 
 ## For Fastmail Staff
-Please tell me if using these unpublished API is inappopriate; and I will take it down if you want to.
+Please tell me if using these unpublished API is inappopriate; and I will take it down if asked.
