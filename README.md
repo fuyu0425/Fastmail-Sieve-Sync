@@ -51,6 +51,7 @@ sieve-sync --push
 ```
 
 It will read from `SAVE_LOCATION` and push the update to Fastmail.
+<red>It will also pull non-managed contents (outside those commented blocks) to the saved rules.</red>
 
 ## Possible Application that builds on Sieve rules sync
 ### WIP: Masked/Random Email for all domains you own

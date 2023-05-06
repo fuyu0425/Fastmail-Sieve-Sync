@@ -96,10 +96,10 @@ def main():
         if sieve != old_sieve:
             set_res = client.set_sieve(sieve)
             print('push to remote')
-            with open(save_location, 'w') as f:
-                f.write(str(sieve))
         else:
             print('no change so far; skip pushing')
+        with open(save_location, 'w') as f:
+            f.write(str(sieve))
 
 
 if __name__ == '__main__':
