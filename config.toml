@@ -1,0 +1,9 @@
+USERNAME="example@example.com"
+
+TOKEN="fma1-XXXXXXX"
+
+# Cookie seprate by; You can get the cookie when you login to the webmail!
+COOKIE="__Host-s_XXXXXX=XXXXXXXX"
+
+# The path you want
+SAVE_LOCATION='rules.sieve'
