@@ -64,9 +64,9 @@ This is can be easily achieved by generating a set of sieve rules.
 
 1. Enable Catch-all address for your domain.
 2. Use tools to generate random addresses for your domain.
-3. Generate Sieve rules automatically to drop mails sent to disabled maksed addressed.
+3. Generate Sieve rules automatically to drop mails sent to disabled masked email addresses.
 
-Hope we don't need to this tool anymore in the future when the offical API allows us to set the domain we want.
+Hope we don't need to this tool anymore in the future when the official API allows us to set the domain we want.
 
 ## Note
 This project is mainly a POC.
@@ -77,4 +77,4 @@ I hope that Fastmail will not prevent us from doing such things before they publ
 
 
 ## For Fastmail Staff
-Please tell me if using these unpublished API is inappopriate; and I will take it down if asked.
+Please tell me if using these unpublished API is inappropriate; and I will take it down if asked.
