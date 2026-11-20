@@ -5,7 +5,7 @@ Python version >3.11 because I use builtin `tomllib` module recently introduced.
 
 ## Install
 ```bash
-pip install .
+uv tool install .
 ```
 ## Config
 Please look at `config.toml`.

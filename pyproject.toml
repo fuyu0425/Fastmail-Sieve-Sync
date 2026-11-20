@@ -1,22 +1,23 @@
-[tool.poetry]
+[project]
 name = "sieve-sync"
 version = "0.1.0"
 description = "Sync Fastmail Seive Rules"
-authors = ["Yu-Fu Fu <yufu@yfu.tw>"]
+authors = [{ name = "Yu-Fu Fu", email = "yufu@yfu.tw" }]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "sieve_sync"}]
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.30.0,<3",
+    "typed-argument-parser>=1.8.0,<2",
+    "pyxdg>=0.28,<0.29",
+]
 
-[tool.poetry.scripts]
+[project.scripts]
 sieve-sync = "sieve_sync.sieve_sync:main"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-requests = "^2.30.0"
-typed-argument-parser = "^1.8.0"
-pyxdg = "^0.28"
-
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.10.2,<0.11"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
