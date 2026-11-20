@@ -23,7 +23,7 @@ cp config.toml ~/.config/sieve-sync/config.toml
 5. fill the value back to `config.toml`
 
 - token has the format: `fma1-XXXXX`
-- cookie has the format `__Host-s_XXXXXX=XXXXXXXX`: only this specific cookie is needed after my test
+- cookie has the format `__Http-s_XXXXXXXX=XXXXXXXX`: only this specific cookie is needed (tested 2026-11-20; it was `__Host-s_` before). Copying the whole `Cookie` header also works.
 
 You can look the following screenshots:
 ![Edit Sieve to trigger request](./images/sieve_edit.png)
