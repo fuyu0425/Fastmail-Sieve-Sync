@@ -4,6 +4,8 @@ A CLI (`sieve-sync`) that pulls and pushes the hand-written parts of a Fastmail 
 
 Read `docs/fastmail-sieve.md` before you write or validate Sieve code. It lists the capabilities Fastmail supports and its delivery quirks.
 
+`skills/sieve-sync/SKILL.md` is the usage skill. `~/.agents/skills/sieve-sync` links to it. Update it when CLI output, flags, or the managed-block layout change.
+
 ## How it works
 
 Fastmail stores the Sieve script as one `SieveBlocks` object with the id `singleton`. The object has six sections, in this order:
