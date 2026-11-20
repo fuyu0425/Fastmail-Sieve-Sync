@@ -42,7 +42,6 @@ A live `SieveBlocks/get` (2026-11-20) returns exactly these six fields plus `id`
 ## Safety
 
 - A push or a first run changes the **live mail filters** of a real account. Get the user's approval before you run the CLI against Fastmail.
-- `main()` prints the whole config, which includes the token and the cookie. Do not copy that output into commits, issues, or PRs.
 - The repo `config.toml` is a template with placeholder values. Put real values only in the XDG config file. `rules.sieve` is in `.gitignore`.
 
 ## Develop

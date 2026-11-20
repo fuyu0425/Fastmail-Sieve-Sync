@@ -45,7 +45,6 @@ def main():
 
         with open(config_file, "rb") as f:
             data: Any = tomllib.load(f)
-    print(data)
 
     client = TinyJMAPClient(
         hostname='api.fastmail.com',
